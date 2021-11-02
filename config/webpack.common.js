@@ -5,12 +5,15 @@ const srcDir = path.join(__dirname, '../src');
 
 module.exports = {
   entry: {
-    main: path.join(srcDir, '/index.js'),
+    main: path.join(srcDir, '/index.tsx'),
   },
   output: {
     path: path.join(__dirname, '../dist'),
     filename: '[name].[chunkhash:8].js',
     chunkFilename: 'chunk/[name].[chunkhash:8].js',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [
     new webpack.DefinePlugin({ FONT_BASE: 14 }),
@@ -22,9 +25,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jsx|js)?$/,
+        test: /\.(tsx|ts)?$/,
         use: ['babel-loader'],
-        include: srcDir,
+        exclude: /node_modules/,
       },
     ],
   },
