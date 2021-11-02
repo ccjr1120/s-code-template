@@ -1,0 +1,28 @@
+{
+  "name": "base-template",
+  "version": "1.0.0",
+  "description": "### notes:",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccjr1120/s-code-template.git#base-template"
+  },
+  "author": "ccjr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccjr1120/s-code-template/issues"
+  },
+  "homepage": "https://github.com/ccjr1120/s-code-template/tree/base-template#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}

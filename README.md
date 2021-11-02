@@ -1,7 +1,3 @@
-# s-code-template: suse-cli template depository
+# base-template: Only have webserver and Signle entery
 
-### Classification by branch
-
-| Template | Branch |
-| -------- | ------ |
-|          |        |
+### notes:
