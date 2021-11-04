@@ -13,6 +13,7 @@ module.exports = {
     chunkFilename: 'chunk/[name].[chunkhash:8].js',
   },
   resolve: {
+    alias: { '@': srcDir },
     extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [

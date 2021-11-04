@@ -4,6 +4,8 @@
     "jsxImportSource": "@emotion/react",
     "esModuleInterop": true,
     "baseUrl": "./",
-    "paths": { "@": ["src/"] }
+    "paths": { "@/*": ["src/*"] },
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
