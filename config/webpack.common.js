@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+
 const srcDir = path.join(__dirname, '../src');
 
 module.exports = {
@@ -11,6 +12,10 @@ module.exports = {
     path: path.join(__dirname, '../dist'),
     filename: '[name].[chunkhash:8].js',
     chunkFilename: 'chunk/[name].[chunkhash:8].js',
+  },
+  resolve: {
+    alias: { '@': srcDir },
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new webpack.DefinePlugin({ FONT_BASE: 14 }),
