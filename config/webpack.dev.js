@@ -11,6 +11,6 @@ module.exports = merge(common, {
     historyApiFallback: true,
     compress: true,
   },
-  plugins: [ new webpack.HotModuleReplacementPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devtool: 'eval-source-map',
 });
