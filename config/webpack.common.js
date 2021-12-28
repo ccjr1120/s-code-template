@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const srcDir = path.join(__dirname, '../src');
 
@@ -21,7 +22,15 @@ module.exports = {
     new webpack.DefinePlugin({ FONT_BASE: 16 }),
     new HtmlWebpackPlugin({
       title: 'template',
-      template: `${srcDir}/index.html`,
+      template: `public/index.html`,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: 'public',
+        },
+      ],
     }),
   ],
   module: {
