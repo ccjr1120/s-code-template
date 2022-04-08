@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import View from './View';
 
 const rootNode = document.getElementById('root');
-
-ReactDOM.render(<View />, rootNode);
+const root = createRoot(rootNode as HTMLElement);
+root.render(<View />);
